@@ -1,0 +1,96 @@
+/* subweb4.css */
+
+/* iframe 내 콘텐츠의 기본 스타일 */
+body {
+    font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0; /* 기본 마진 제거 */
+    background-color: #f4f7f6; /* 약간의 배경색 */
+    padding: 20px; /* 콘텐츠의 기본 여백 */
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+}
+
+.content-section {
+    padding: 30px;
+    max-width: 1200px; /* 콘텐츠 최대 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+    background-color: #ffffff; /* 흰색 배경 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 은은한 그림자 */
+    border-radius: 8px; /* 모서리 둥글게 */
+}
+
+h2 {
+    color: #2c3e50; /* 진한 파랑-회색 */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    font-weight: bold;
+    border-bottom: 2px solid #3498db; /* 제목 아래 파란색 밑줄 */
+    padding-bottom: 15px;
+    display: inline-block; /* 텍스트 길이에 맞게 밑줄이 그어지도록 */
+    margin-left: auto; /* 중앙 정렬 */
+    margin-right: auto; /* 중앙 정렬 */
+}
+
+/* subweb4.html 전용 스타일 */
+.section-container {
+    display: flex;
+    flex-wrap: wrap; /* 창 크기에 따라 자동으로 줄바꿈 */
+    gap: 20px; /* 카드 사이의 간격 */
+    justify-content: center; /* 카드들을 중앙으로 정렬 */
+}
+
+.action-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 카드 그림자 */
+    padding: 25px;
+    width: calc(33.333% - 40px); /* 3열 배치 (gap 20px * 2 = 40px를 제외한 너비) */
+    min-width: 280px; /* 카드의 최소 너비 설정, 너무 작아지지 않도록 */
+    text-align: center;
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 계산 */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* 호버 효과 부드럽게 */
+}
+
+.action-card:hover {
+    transform: translateY(-5px); /* 호버 시 약간 위로 이동 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 진하게 */
+}
+
+.action-card h3 {
+    color: #3498db; /* 파란색 제목 */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.action-card p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.action-card img {
+    max-width: 80px; /* 아이콘 최대 너비 */
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); /* 아이콘에 은은한 그림자 */
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 900px) {
+    .action-card {
+        width: calc(50% - 30px); /* 2열 배치 */
+    }
+}
+@media (max-width: 600px) {
+    .action-card {
+        width: calc(100% - 20px); /* 1열 배치 */
+    }
+    .content-section {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}

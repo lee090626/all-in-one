@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>로그인</title> 
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+  <!-- 로그인 페이지 전체 컨테이너 -->
+  <div class="login-page">
+    <!-- 로그인 폼 박스 -->
+    <div class="login-box">
+      <!-- 로그인 제목 -->
+      <h2>로그인</h2>
+      
+      <!-- 로그인 폼 (서버에 POST 방식으로 전송) -->
+      <form action="#" method="post">
+        
+        <!-- 아이디 입력 그룹 -->
+        <div class="input-group">
+          <label for="username">아이디</label> <!-- input 요소와 연결된 라벨 -->
+          <input type="text" id="username" name="username" required /> <!-- 아이디 입력 필드 (필수 입력) -->
+        </div>
+        
+        <!-- 비밀번호 입력 그룹 -->
+        <div class="input-group">
+          <label for="password">비밀번호</label> <!-- input 요소와 연결된 라벨 -->
+          <input type="password" id="password" name="password" required /> <!-- 비밀번호 입력 필드 (필수 입력) -->
+        </div>
+        
+        <!-- 로그인 제출 버튼 -->
+        <button type="submit">로그인</button>
+        
+        <!-- 회원가입 링크 안내 문구 -->
+        <p class="signup-link">
+          계정이 없으신가요? <a href="#">회원가입</a> <!-- 회원가입 페이지 링크 (현재 #로 설정되어 있음) -->
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+/* 모든 요소의 기본 여백 제거 및 박스 크기 계산 방식 통일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 전체 페이지 기본 스타일 */
+body {
+  font-family: 'Segoe UI', sans-serif; /* 폰트 지정 */
+  background-color: #f7f9fc; /* 밝은 회색 배경 */
+  color: #333; /* 기본 글자색 */
+  padding: 40px; /* 바깥 여백 */
+  line-height: 1.8; /* 줄 간격 */
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+}
+
+/* 메인 콘텐츠 박스 스타일 */
+.container {
+  max-width: 1000px; /* 최대 너비 제한 */
+  width: 100%; /* 화면 크기 대응 */
+  background-color: #ffffff; /* 흰색 배경 */
+  padding: 40px; /* 내부 여백 */
+  border-radius: 12px; /* 모서리 둥글게 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+  display: flex;
+  flex-direction: column; /* 수직 방향 정렬 */
+  gap: 30px; /* 요소 간 간격 */
+}
+
+/* 페이지 제목 스타일 */
+h1 {
+  font-size: 2.5em; /* 큰 글씨 */
+  color: #0077b6; /* 파란 계열 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+/* 섹션 제목 스타일 */
+h2 {
+  font-size: 1.6em;
+  color: #023e8a; /* 진한 파랑 */
+  border-left: 5px solid #0077b6; /* 왼쪽 줄 장식 */
+  padding-left: 10px; /* 줄과 텍스트 사이 간격 */
+  margin-bottom: 10px;
+}
+
+/* 일반 문단 스타일 */
+p {
+  font-size: 1.1em;
+}
+
+/* 강조 블록 스타일 */
+.highlight {
+  background-color: #e0f7fa; /* 연한 청록색 배경 */
+  padding: 15px 20px;
+  border-left: 5px solid #00b4d8; /* 왼쪽 강조선 */
+  border-radius: 6px; /* 모서리 둥글게 */
+  font-weight: bold; /* 굵은 글씨 */
+  color: #014f86; /* 강조된 글씨 색 */
+}
+
+/* 이미지 기본 스타일 */
+img {
+  max-width: 100%; /* 부모 너비에 맞춤 */
+  border-radius: 10px; /* 둥근 모서리 */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1); /* 부드러운 그림자 */
+  align-self: center; /* 부모 요소에서 가운데 정렬 */
+}
+
+/* 좌우 2단 구성용 그리드 */
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 동일한 크기의 2열 */
+  gap: 30px; /* 열 사이 간격 */
+}
+
+/* 목록 기본 스타일 */
+ul {
+  padding-left: 20px;
+}
+
+/* 목록 항목 스타일 */
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px; /* 체크 아이콘 공간 확보 */
+}
+
+/* 체크 아이콘 스타일 */
+ul li::before {
+  content: "✔"; /* 체크 표시 */
+  position: absolute;
+  left: 0;
+  color: #0096c7; /* 청록 계열 아이콘 색 */
+}
+
+table tr td{
+  color: black;
+}
+
+table tr th{
+  color: black;
+}
+
+/* 반응형: 화면이 768px 이하일 때 한 열로 변경 */
+@media screen and (max-width: 768px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sulmeong {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.sulmeong:hover {
+  transform: translateY(-5px); /* 호버 시 약간 위로 이동 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 진하게 */
+}

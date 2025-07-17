@@ -1,0 +1,151 @@
+/* 전체 페이지 기본 설정 */
+body {
+  margin: 0; /* 바디의 기본 여백 제거 */
+  font-family: 'Segoe UI', sans-serif; /* 세련된 산세리프 글꼴 적용 */
+  background-color: #f4fdfc; /* 연한 민트 배경색 */
+  color: #222; /* 텍스트 색상: 어두운 회색 */
+  line-height: 1.6; /* 줄 간격 설정 */
+}
+
+/* 콘텐츠를 감싸는 중앙 정렬된 컨테이너 */
+.container {
+  max-width: 800px; /* 최대 너비 지정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 40px 20px; /* 상하 40px, 좌우 20px 여백 */
+}
+
+/* 메인 제목 스타일 */
+h1 {
+  color: #00796b; /* 진한 청록색 글씨 */
+  font-size: 2em; /* 글자 크기 2배 */
+  margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 부제목 스타일 */
+h2 {
+  color: #005f56; /* 더 어두운 청록색 */
+  margin-top: 30px; /* 위쪽 여백 */
+}
+
+/* 본문 단락 */
+p {
+  margin: 15px 0; /* 위아래 여백 */
+}
+
+/* 강조 문단 스타일 */
+.highlight {
+  background-color: #e0f7fa; /* 밝은 하늘색 배경 */
+  padding: 15px; /* 안쪽 여백 */
+  border-left: 5px solid #00acc1; /* 왼쪽 테두리 강조 */
+  font-weight: bold; /* 굵은 글씨 */
+  margin: 20px 0; /* 위아래 여백 */
+}
+
+/* 목록 항목 스타일 */
+ul {
+  list-style: disc; /* 일반 점 리스트 마커 */
+  margin-left: 20px; /* 왼쪽 들여쓰기 */
+}
+
+/* 이미지 스타일 */
+img {
+  width: 100%; /* 부모 요소에 맞춰 가로폭 설정 */
+  margin: 20px 0; /* 위아래 여백 */
+  border-radius: 10px; /* 둥근 모서리 효과 */
+}
+
+/* 표 전체 스타일 */
+table {
+  width: 100%; /* 가로 전체 사용 */
+  border-collapse: collapse; /* 셀 테두리 겹침 제거 */
+  margin-top: 20px; /* 위쪽 여백 */
+  background-color: white; /* 표 배경 하얀색 */
+}
+
+/* 표 셀 스타일 (헤더와 데이터 공통) */
+table th,
+table td {
+  border: 1px solid #ccc; /* 옅은 회색 테두리 */
+  padding: 12px; /* 안쪽 여백 */
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+/* 표 헤더 셀 전용 스타일 */
+table th {
+  background-color: #e0f7fa; /* 밝은 하늘색 배경 */
+  color: #00796b; /* 진한 청록색 글씨 */
+}
+
+/* 마무리 메시지 스타일 */
+.message {
+  margin-top: 30px; /* 위쪽 여백 */
+  font-size: 1.2em; /* 글자 크기 확대 */
+  color: #00695c; /* 진한 청록색 */
+  text-align: center; /* 가운데 정렬 */
+  font-weight: bold; /* 굵은 글씨 */
+}
+
+/* 페이드 인 효과 (제목용) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 슬라이드 인 효과 (강조 문단) */
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* 확대되며 나타나는 효과 (메시지용) */
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 이미지 확대 효과 */
+@keyframes imageZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+/* 실제 요소에 애니메이션 적용 */
+h1, h2 {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.highlight {
+  animation: slideInLeft 1s ease-out;
+}
+
+.message {
+  animation: zoomIn 1s ease-in-out;
+}
+
+img:hover {
+  animation: imageZoom 0.5s forwards;
+}
+
+/* 등장 애니메이션 정의 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 초기 상태 설정 */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 애니메이션 실행 상태 */
+.scroll-reveal.active {
+  animation: fadeInUp 0.8s ease-out forwards;
+}

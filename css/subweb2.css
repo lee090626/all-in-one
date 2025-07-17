@@ -1,0 +1,100 @@
+/* ============================= */
+/* 기본 페이지 설정 */
+/* ============================= */
+
+body {
+    margin: 0; /* 기본 여백 제거 */
+    font-family: 'Helvetica Neue', sans-serif; /* 세련된 산세리프 폰트 사용 */
+    background-image: url('https://images.unsplash.com/photo-1509395062183-67c5ad6faff9'); /* 배경 이미지 설정 */
+    background-size: cover; /* 배경 이미지를 요소 크기에 맞게 채움 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    color: #fff; /* 전체 기본 글자색을 흰색으로 설정 */
+}
+
+
+/* ============================= */
+/* 어두운 반투명 오버레이 영역 */
+/* ============================= */
+
+.overlay {
+    background: rgba(0, 0, 0, 0.75); /* 반투명 검정 배경으로 시인성 향상 */
+    padding: 60px 20px; /* 위아래 60px, 좌우 20px 여백 */
+    min-height: 1000px; /* 최소 높이 지정 (스크롤 확보) */
+}
+
+
+/* ============================= */
+/* 가운데 정렬된 콘텐츠 박스 */
+/* ============================= */
+
+.container {
+    max-width: 600px; /* 최대 너비 제한 */
+    margin: auto; /* 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+
+/* ============================= */
+/* 제목 및 텍스트 스타일 */
+/* ============================= */
+
+h1 {
+    font-size: 3em; /* 크게 강조된 제목 */
+    margin-bottom: 10px; /* 아래 여백 */
+    color: #ff4444; /* 선명한 빨간색 */
+}
+
+h2 {
+    color: #ffcc00; /* 밝은 노란색 부제목 */
+}
+
+p {
+    font-size: 1.2em; /* 약간 크게 */
+    line-height: 1.6; /* 줄 간격 여유 있게 */
+    margin: 20px 0; /* 위아래 여백 */
+}
+
+
+/* ============================= */
+/* 사실 정보 박스 (왼쪽 정렬) */
+/* ============================= */
+
+.facts {
+    text-align: left; /* 항목들을 왼쪽 정렬 */
+    margin-top: 40px; /* 위쪽 여백 */
+}
+
+.fact-box {
+    background-color: rgba(255, 255, 255, 0.1); /* 연한 흰색 반투명 배경 */
+    padding: 15px; /* 내부 여백 */
+    border-left: 5px solid #ff4444; /* 왼쪽 빨간색 선 강조 */
+    margin-bottom: 15px; /* 박스 사이 간격 */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+
+/* ============================= */
+/* 행동 유도 버튼(Call To Action) */
+/* ============================= */
+
+.cta {
+    margin-top: 40px; /* 위쪽 여백 */
+    background-color: #ff4444; /* 기본 빨간색 배경 */
+    padding: 15px 25px; /* 버튼 내부 여백 */
+    display: inline-block; /* 인라인 요소지만 박스처럼 취급 */
+    border-radius: 8px; /* 버튼 모서리 둥글게 */
+    color: white; /* 글자색 흰색 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-weight: bold; /* 굵은 글씨 */
+    transition: background-color 0.3s ease; /* hover 시 부드러운 색상 변화 */
+}
+
+/* 버튼 호버 효과 */
+.cta:hover {
+    background-color: #cc0000; /* 더 진한 빨간색으로 변경 */
+}
+
+.fact-box:hover {
+    transform: translateY(-5px); /* 호버 시 약간 위로 이동 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 진하게 */
+}

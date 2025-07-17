@@ -1,0 +1,93 @@
+/* 모든 요소의 박스 크기 계산 방식을 border-box로 설정 (패딩과 테두리를 포함한 크기 계산) */
+* {
+  box-sizing: border-box;
+}
+
+/* body 기본 스타일 설정 */
+body {
+  margin: 0; /* 기본 바깥 여백 제거 */
+  font-family: 'Segoe UI', sans-serif; /* 본문 글꼴 지정 */
+  background: linear-gradient(to right, #74ebd5, #acb6e5); /* 좌에서 우로 흐르는 그라데이션 배경 */
+  display: flex; /* 플렉스 박스 레이아웃 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  height: 100vh; /* 뷰포트 높이 100%로 전체 화면 높이 사용 */
+}
+
+/* 로그인 페이지 컨테이너 너비 설정 */
+.login-page {
+  width: 100%; /* 최대 너비까지 늘림 */
+  max-width: 400px; /* 최대 400px 너비 제한 */
+}
+
+/* 로그인 박스 스타일 */
+.login-box {
+  background-color: white; /* 배경 흰색 */
+  padding: 40px; /* 내부 여백 */
+  border-radius: 12px; /* 둥근 모서리 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* 부드러운 그림자 효과 */
+}
+
+/* 로그인 박스 내부 제목 */
+.login-box h2 {
+  text-align: center; /* 가운데 정렬 */
+  margin-bottom: 30px; /* 아래쪽 여백 */
+  color: #333; /* 글자색: 짙은 회색 */
+}
+
+/* 입력 그룹 간격 */
+.input-group {
+  margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 입력 그룹의 라벨 스타일 */
+.input-group label {
+  display: block; /* 블록 요소로 변경하여 줄 바꿈 */
+  margin-bottom: 6px; /* 라벨과 입력칸 사이 간격 */
+  font-weight: bold; /* 굵은 글씨 */
+  color: #555; /* 짙은 회색 */
+}
+
+/* 입력 필드 스타일 */
+.input-group input {
+  width: 100%; /* 부모 너비 100% */
+  padding: 10px; /* 내부 여백 */
+  border: 1px solid #ccc; /* 연한 회색 테두리 */
+  border-radius: 6px; /* 둥근 모서리 */
+}
+
+/* 버튼 기본 스타일 */
+button {
+  width: 100%; /* 너비 100% */
+  padding: 12px; /* 내부 여백 */
+  background-color: #0077b6; /* 파란색 배경 */
+  color: white; /* 글자 흰색 */
+  border: none; /* 테두리 제거 */
+  border-radius: 6px; /* 둥근 모서리 */
+  font-size: 1em; /* 기본 폰트 크기 */
+  cursor: pointer; /* 마우스 커서가 손가락 모양으로 변경 */
+  transition: background-color 0.3s; /* 배경색 변화 부드럽게 처리 */
+}
+
+/* 버튼 호버(마우스 올림) 효과 */
+button:hover {
+  background-color: #005f86; /* 더 진한 파란색으로 변경 */
+}
+
+/* 회원가입 링크 문단 스타일 */
+.signup-link {
+  text-align: center; /* 가운데 정렬 */
+  margin-top: 15px; /* 위쪽 여백 */
+  font-size: 0.9em; /* 약간 작은 글씨 크기 */
+}
+
+/* 회원가입 링크 스타일 */
+.signup-link a {
+  color: #0077b6; /* 파란색 링크 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 회원가입 링크 호버 시 밑줄 추가 */
+.signup-link a:hover {
+  text-decoration: underline;
+}
